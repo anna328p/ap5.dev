@@ -1,9 +1,11 @@
 // main grid
 
-html, body, main, .container { height: 100%; }
+main { height: 100vh; }
 
 body {
 	margin: 0;
+	padding: 0;
+
 	font-family: 'Source Serif 4', 'Source Serif Pro', Times, 'Times New Roman', serif;
 	width: auto;
 	font-size: 14pt;
@@ -40,9 +42,21 @@ li {
 	margin-bottom: 2rem;
 }
 
+// pages
+
+.page-container {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+
+.page-main {
+	height: fit-content;
+}
+
 // fonts etc.
 
-.index a { color: black; }
+.index a, .site-footer a { color: black; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: 600; }
 

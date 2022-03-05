@@ -1,13 +1,16 @@
 ---
 layout: default
 ---
-.container
-  nav
-    p.return-link-entry
-      span.return-link-pre ←
-      a.return-link href='/' Return to main page
-  header
-    h1 
-      | {{ page.title }}
-  main
-    | {{ content }}
+.container.page-container
+  section
+    nav
+      p.return-link-entry
+        span.return-link-pre ←
+        a.return-link href='/' Return to main page
+    header
+      h1 
+        | {{ page.title }}
+    main.page-main
+      | {{ content }}
+  section.col-footer
+    | {% include footer.slim %}
