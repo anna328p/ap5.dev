@@ -22,8 +22,12 @@ main aria-label="Content"
               | {{ content }}
         .col
           nav.link-list
+            p.sidebar-link-entry
+              span.sidebar-link-pre →
+              a.sidebar-link href='assets/files/Resume - Anna Kudriavtsev - 2022-02-23.pdf'
+                | Resume
+              span.pdf-badge PDF
             - links = { \
-                'Resume' => 'assets/files/Resume - Anna Kudriavtsev - 2022-02-23.pdf',
                 'Twitter' => 'https://twitter.com/anna328p',
                 'GitHub' => 'https://github.com/anna328p',
                 'Projects' => "/projects",
@@ -32,7 +36,7 @@ main aria-label="Content"
             - links.each do |name, target|
               p.sidebar-link-entry
                 span.sidebar-link-pre →
-                a.sidebar-link href=target = name
+                a.sidebar-link href=target == name
     .index-row
       footer.col-footer
         | {% include footer.slim %}

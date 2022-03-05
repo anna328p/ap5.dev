@@ -31,10 +31,6 @@ p {
 	align-self: center;
 }
 
-.scrolling {
-	overflow: auto;
-}
-
 .col-footer {
 	margin-top: 1rem;
 	margin-bottom: 2rem;
@@ -51,11 +47,6 @@ h1 {
 	margin-bottom: 0;
 }
 
-h2 {
-	font-size: 28pt;
-	margin-top: 2rem;
-}
-
 h1.name {
 	line-height: 44pt;
 	width: fit-content;
@@ -66,10 +57,6 @@ h1.name {
 
 	margin-top: 0.75rem;
 	margin-bottom: 0rem;
-}
-
-h2.column-heading {
-	line-height: 44pt;
 }
 
 span.divider {
@@ -95,11 +82,27 @@ span.divider {
 .sidebar-link-pre {
 	margin-right: 1rem;
 }
-.sidebar-link {
-	margin: 1rem;
-	margin-left: 0;
 
+.sidebar-link {
+	margin: 1rem 0;
 	border-bottom: solid 2px gray;
+	vertical-align: middle;
+}
+
+span.pdf-badge {
+	display: inline-block;
+	font-family: 'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 7pt;
+
+	margin-left: 0.4rem;
+
+	border: 1px solid grey;
+	border-radius: 3px;
+	padding: 0 2px;
+
+	vertical-align: 1px;
+
+	color: #333333;
 }
 
 img.headshot {
