@@ -1,0 +1,8 @@
+- divider = "<span class=\"divider\"> &nbsp;|&nbsp; </span>"
+
+div
+  | 🄯 {{ site.name }} {{ "now" | date: "%Y" }}
+  == divider
+  a href='/LICENSE.txt' AGPLv3
+  == divider
+  a href="{{ site.repo }}" Source code

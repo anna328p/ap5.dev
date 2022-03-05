@@ -1,0 +1,107 @@
+// main grid
+
+html, body, main, .container { height: 100%; }
+
+body {
+	margin: 0;
+	font-family: 'Source Serif 4', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	width: auto;
+	font-size: 14pt;
+}
+
+p {
+	line-height: 1.5;
+}
+
+.index-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100%;
+
+	column-gap: 10%;
+}
+
+.vcenter-col {
+	display: grid;
+	min-height: 100%;
+	grid-template-rows: 1fr auto;
+}
+
+.vcenter-item {
+	align-self: center;
+}
+
+.scrolling {
+	overflow: auto;
+}
+
+.col-footer {
+	margin-bottom: 2rem;
+}
+
+// fonts etc.
+
+a { color: black; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+
+h1 {
+	font-size: 36pt;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 28pt;
+	margin-top: 2rem;
+}
+
+h1.name {
+	line-height: 44pt;
+	width: fit-content;
+	display: inline-block;
+
+	padding-bottom: 0.8rem;
+	border-bottom: 2px solid gray;
+
+	margin-top: 0.75rem;
+	margin-bottom: 0rem;
+}
+
+h2.column-heading {
+	line-height: 44pt;
+}
+
+span.divider {
+	font-weight: 600;
+}
+
+// links
+
+.link-list > p > a {
+	color: black;
+	text-decoration: none;
+}
+
+.sidebar-link-entry {
+	width: fit-content;
+	transition: 0.1s;
+}
+
+.sidebar-link-entry:hover {
+	margin-left: .5rem;
+}
+
+.sidebar-link-pre {
+	margin-right: 1rem;
+}
+.sidebar-link {
+	margin: 1rem;
+	margin-left: 0;
+
+	border-bottom: solid 2px gray;
+}
+
+img.headshot {
+	width: 10rem;
+	border-radius: 1rem;
+}

@@ -1,0 +1,44 @@
+| {% capture imgurl %}
+| {{ site.url }}/{{ site.baseurl }}/assets/images/{{ site.image }}
+| {% endcapture %}
+
+meta charset="utf-8"
+meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+link rel="preconnect" href="https://fonts.googleapis.com"
+link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=true
+
+- font_url = "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap"
+
+link rel="preload" href="#{font_url}" as="style" onload="this.onload=null;this.rel='stylesheet'"
+noscript
+  link rel="stylesheet" href="#{font_url}"
+
+link href='/assets/css/style.css' rel='stylesheet'
+
+title
+  | {{ site.title }}
+
+// description tags
+meta name="description" content="{{ site.description }}"
+meta name="image" content="{{ imgurl }}"
+
+// Schema.org for Google
+meta itemprop="name" content="{{ site.title }}"
+meta itemprop="description" content="{{ site.description }}"
+meta itemprop="image" content="{{ imgurl }}"
+
+// Twitter
+meta name="twitter:card" content="summary"
+meta name="twitter:title" content="{{ site.title }}"
+meta name="twitter:description" content="{{ site.description }}"
+meta name="twitter:creator" content="@{{ site.twitter_username }}"
+meta name="twitter:image:src" content="{{ imgurl }}"
+
+// Open Graph
+meta name="og:title" content="{{ site.title }}"
+meta name="og:description" content="{{ site.description }}"
+meta name="og:image" content="{{ imgurl }}"
+meta name="og:url" content="{{ site.url }}"
+meta name="og:site_name" content="ap5.dev"
+meta name="og:type" content="website"
