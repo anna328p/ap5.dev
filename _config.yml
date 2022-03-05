@@ -34,6 +34,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-slim
+  - jekyll-minifier
 
 kramdown:
   parse_block_html: true
