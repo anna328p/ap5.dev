@@ -1,0 +1,5 @@
+@media #{$small-and-down} {
+	.index-row {
+		grid-template-columns: 1fr;
+	}
+}
