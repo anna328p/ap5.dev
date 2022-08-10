@@ -39,6 +39,13 @@ plugins:
 kramdown:
   parse_block_html: true
 
+collections:
+  posts:
+    permalink: /blog/:categories/:year/:month/:day/:title/
+
+disqus:
+  shortname: ap5.dev
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

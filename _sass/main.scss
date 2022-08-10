@@ -9,6 +9,8 @@ body {
 	font-family: 'Source Serif 4', 'Source Serif Pro', Times, 'Times New Roman', serif;
 	width: auto;
 	font-size: 14pt;
+	
+	background-color: #EEE;
 }
 
 p, li {
@@ -156,3 +158,86 @@ img.headshot {
 	border-radius: 1rem;
 	margin-top: 2rem;
 }
+
+// blog
+
+a.post-link { 
+	color: black;
+	font-weight: 600;
+}
+
+.post-summary-header {
+	font-size: 14pt;
+	font-weight: normal;
+	margin: 0;
+}
+
+article.post-summary {
+	margin: 15px 0 30px 0;
+}
+
+blockquote.post-preview {
+	margin: 0;
+	padding-top: 0px;
+	margin-top: 7px;
+	border-top: 1px solid lightgrey;
+}
+
+blockquote.post-preview p {
+	margin-top: 12px;
+	margin-bottom: 0;
+
+	margin-left: 5px;
+	padding-left: 10px;
+	border-left: 2px solid lightgrey;
+}
+
+p.post-tag-list {
+	margin: 10px 0;
+	font-size: 12pt;
+}
+
+p.post-license {
+	margin: 0;
+	font-size: 12pt;
+}
+
+h1.post-title {
+	font-size: 30pt;
+	margin-bottom: 0px;
+}
+
+.post-header {
+	max-width: 40em;
+	margin: auto;
+	color: #222;
+}
+
+.post-comments {
+	margin-top: 15px;
+	max-width: 40em;
+	margin: auto;
+	color: #222;
+}
+
+.post-main {
+	max-width: 40em;
+	margin: auto;
+	margin-top: 20px;
+	color: #282828;
+
+	background-color: #F8F8F8;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.post-main p:first-child {
+	margin-top: 0;
+}
+
+.post-main p:last-child {
+	margin-bottom: 0;
+}
+
+.grey { color: grey; }

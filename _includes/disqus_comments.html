@@ -1,0 +1,15 @@
+{%- if page.comments != false -%}
+
+  <div id="comment-section"></div>
+  <script>
+  initComments({
+    node: document.getElementById("comment-section"),
+    defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+    serverName: "cactus.chat",
+    siteName: "{{ site.disqus.shortname }}",
+    commentSectionId: "{{ page.url }}"
+  })
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://cactus.chat" rel="nofollow">comments powered by matrix.org.</a></noscript>
+
+{%- endif -%}

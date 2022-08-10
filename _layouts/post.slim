@@ -1,0 +1,38 @@
+---
+layout: default
+---
+.container.page-container
+  section
+    nav
+      p.return-link-entry
+        span.return-link-pre ←
+        a.return-link href='/blog/' Return to index
+    article
+      header.post-header
+        h1.post-title
+          | {{ page.title }}
+        p.post-summary-header
+          | by {{ page.author }} at {{ page.date }}
+
+        | {% if page.license %}
+        p.post-license
+          | license: {{ page.license }}
+        | {% endif %}
+
+        | {% if page.tags.size > 0 %}
+        p.post-tag-list
+          | (tags: 
+          | {% for tag in page.tags %}
+          span.post-tag  
+            | {{ tag }}
+          | {% endfor %})
+        | {% endif %}
+
+      main.page-main.post-main
+        | {{ content }}
+
+      div.post-comments
+        h2 Comments
+        | {% include disqus_comments.html %}
+  section.col-footer
+    | {% include footer.slim %}

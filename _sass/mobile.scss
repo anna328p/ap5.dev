@@ -2,4 +2,11 @@
 	.index-row {
 		grid-template-columns: 1fr;
 	}
+
+	.post-main {
+		padding: 0;
+		border: none;
+		color: #222;
+		background-color: #eee;
+	}
 }

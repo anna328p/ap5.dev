@@ -1,0 +1,23 @@
+---
+layout: page
+title: Blog
+---
+
+| {% for post in site.posts %}
+article.post-summary
+  h2.post-summary-header
+    a.post-link href="{{ post.url }}" {{ post.title }}
+    |  by {{ post.author }} at {{ post.date }}
+  blockquote.post-preview 
+    p
+      ' {{ post.excerpt | strip_html | truncatewords: 50 }}
+      a.grey href="{{ post.url }}"
+        | […]
+  | {% if post.tags.size > 0 %}
+  p.post-tag-list
+    | (tags:
+    | {% for tag in post.tags %}
+    span.post-tag  {{ tag }}
+    | {% endfor %})
+  | {% endif %}
+| {% endfor %}
