@@ -41,7 +41,7 @@ kramdown:
 
 collections:
   posts:
-    permalink: /blog/:categories/:year/:month/:day/:title/
+    permalink: /blog/:categories/:year/:month/:day/:title
 
 disqus:
   shortname: ap5.dev
