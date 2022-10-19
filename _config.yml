@@ -43,8 +43,9 @@ collections:
   posts:
     permalink: /blog/:categories/:year/:month/:day/:title
 
-disqus:
-  shortname: ap5.dev
+# TODO: reenable
+#disqus:
+#  shortname: ap5.dev
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
