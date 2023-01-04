@@ -1,7 +1,3 @@
-| {% capture imgurl %}
-| {{ site.url }}/{{ site.baseurl }}/{{ site.image }}
-| {% endcapture %}
-
 meta charset="utf-8"
 meta http-equiv="Cache-Control" content="public; max-age=86400"
 
@@ -10,38 +6,56 @@ meta name="viewport" content="width=device-width, initial-scale=1.0"
 link rel="preconnect" href="https://fonts.googleapis.com"
 link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=true
 
-- font_url = "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap"
+- ss4 = "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap"
+- scp = "https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 
-link rel="preload" href="#{font_url}" as="style" onload="this.onload=null;this.rel='stylesheet'"
-noscript
-  link rel="stylesheet" href="#{font_url}"
+- [ss4, scp].each do |font_url|
+  link rel="preload" href="#{font_url}" as="style" onload="this.onload=null;this.rel='stylesheet'"
+  noscript
+    link rel="stylesheet" href="#{font_url}"
 
 link href='/assets/css/style.css' rel='stylesheet'
 
 title
-  | {{ page.title }} - {{ site.name }}
+  | {{ page.title }}{{ page.titleextra }} - {{ site.name }}
+
+| {% if page.excerpt %}
+| {% capture desc %}
+| {{ page.excerpt | strip_html | truncatewords: 50 }}
+| {% endcapture %}
+| {% else %}
+| {% assign desc = site.description %}
+| {% endif %}
+
+| {% capture img %}
+| {{ site.url }}{{ site.baseurl }}{{ site.image }}
+| {% endcapture %}
+
+| {% capture url %}
+| {{ site.url }}{{ site.baseurl }}{{ page.url }}
+| {% endcapture %}
 
 // description tags
-meta name="description" content="{{ site.description }}"
-meta name="image" content="{{ imgurl }}"
+meta name="description" content="{{ desc }}"
+meta name="image" content="{{ img }}"
 
 // Schema.org for Google
-meta itemprop="name" content="{{ site.title }}"
-meta itemprop="description" content="{{ site.description }}"
-meta itemprop="image" content="{{ imgurl }}"
+meta itemprop="name" content="{{ page.title }}"
+meta itemprop="description" content="{{ desc }}"
+meta itemprop="image" content="{{ img }}"
 
 // Twitter
 meta name="twitter:card" content="summary"
-meta name="twitter:title" content="{{ site.title }}"
-meta name="twitter:description" content="{{ site.description }}"
+meta name="twitter:title" content="{{ page.title }}"
+meta name="twitter:description" content="{{ desc }}"
 meta name="twitter:creator" content="@{{ site.twitter_username }}"
-meta name="twitter:image:src" content="{{ imgurl }}"
+meta name="twitter:image:src" content="{{ img }}"
 
 // Open Graph
-meta name="og:title" content="{{ site.title }}"
-meta name="og:description" content="{{ site.description }}"
-meta name="og:image" content="{{ imgurl }}"
-meta name="og:url" content="{{ site.url }}"
+meta name="og:title" content="{{ page.title }}"
+meta name="og:description" content="{{ desc }}"
+meta name="og:image" content="{{ img }}"
+meta name="og:url" content="{{ url }}"
 meta name="og:site_name" content="ap5.dev"
 meta name="og:type" content="website"
 

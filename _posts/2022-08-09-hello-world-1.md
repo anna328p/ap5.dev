@@ -1,6 +1,4 @@
 ---
-layout: post
-
 title: Hello, world
 author: Anna
 date: 2022-08-09T16:57:36-07:00

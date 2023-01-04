@@ -1,6 +1,4 @@
 ---
-layout: post
-
 title: Bootstrapping Rails on NixOS
 author: Anna
 date: 2023-01-03T22:59:27-06:00

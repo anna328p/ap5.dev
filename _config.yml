@@ -62,3 +62,19 @@ exclude:
   - scripts/
   - .github/
   - .direnv/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      titleextra: " - Blog"
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      layout: "post"
+      titleextra: " - Drafts"
