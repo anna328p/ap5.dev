@@ -11,31 +11,26 @@ recently tried to start a Rails project on NixOS, realized that there was no obv
 
 i figured out a fairly simple process. i use direnv and flakes, and this process does too.
 
-first, create a project directory. enter it. create the following two files to set up a minimal flake:  
+first, create a project directory. enter it. create the following two files to set up a trivial flake:
 
-`flake.nix`  
+{% codefile flake.nix %}
 ```nix
 {
     description = "TODO";
 
-    inputs = {
-        flake-utils.url = github:numtide/flake-utils;
-    };
+    inputs.flake-utils.url = github:numtide/flake-utils;
 
-    outputs = { self
-        , nixpkgs
-        , flake-utils
-    }: flake-utils.lib.eachDefaultSystem (system: let
-        pkgs = nixpkgs.legacyPackages.${system};
-
-        pkg = pkgs.callPackage ./default.nix { };
-    in {
-        packages.default = pkg;
-    });
+    outputs = { self, nixpkgs, flake-utils }:
+        flake-utils.lib.eachDefaultSystem (system: let
+            pkgs = nixpkgs.legacyPackages.${system};
+        in {
+            packages.default = pkgs.callPackage ./default.nix;
+        });
 }
 ```
+{% endcodefile %}
 
-`default.nix`  
+{% codefile default.nix %}
 ```nix
 { stdenv, ruby_3_1 }:
 
@@ -47,23 +42,28 @@ stdenv.mkDerivation {
     buildInputs = [ ruby_3_1 ];
 }
 ```
+{% endcodefile %}
 
 then, create an .envrc with the following content:
 
+{% codefile .envrc %}
 ```
 use flake
 layout ruby
 ```
+{% endcodefile %}
 
 run `direnv allow`.
 
 next, write a bootstrap Gemfile:
 
+{% codefile Gemfile %}
 ```ruby
 source 'https://rubygems.org'
 
 gem 'rails'
 ```
+{% endcodefile %}
 
 install locally by running `bundle install --path=vendor` (ignore the warnings for now)
 

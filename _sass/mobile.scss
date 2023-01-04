@@ -10,7 +10,13 @@
 		background-color: #eee;
 	}
 
+	$code-block-width: 85vw;
+
 	pre {
-		max-width: 85vw;
+		max-width: $code-block-width;
+	}
+
+	.code-file > code.code-file-name {
+		max-width: $code-block-width;
 	}
 }

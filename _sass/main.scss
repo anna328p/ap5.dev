@@ -245,8 +245,6 @@ h1.post-title {
 
 .grey { color: grey; }
 
-// Syntax highlighting
-@import "pygments.css";
 
 // Code blocks
 
@@ -261,8 +259,6 @@ pre, :not(pre) > code {
 }
 
 pre {
-	background-color: #eee8d5;
-	color: #657b83;
 	padding: 0.5em;
 	line-height: 135%;
 	overflow: auto;
@@ -273,4 +269,26 @@ pre {
 
 	padding: 0 0.18em;
 	margin: 0 0.05em;
+}
+
+// Code file display
+
+.code-file > code.code-file-name {
+	margin-bottom: 0;
+	padding: 0.35em 0.5em;
+
+	display: block;
+
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom: none;
+}
+
+.code-file pre.highlight {
+	margin-top: 0;
+
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+	border-top: 1px dashed #AAA;
 }
