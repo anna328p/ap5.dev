@@ -1,6 +1,4 @@
 ---
-layout: post
-
 title: the state of linux graphics software
 author: Anna
 date: 2022-08-11T15:55:45-07:00
