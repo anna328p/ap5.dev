@@ -224,6 +224,8 @@ h1.post-title {
 	max-width: 40em;
 	margin: auto;
 	margin-top: 20px;
+	margin-bottom: 30px;
+
 	color: #282828;
 
 	background-color: #F8F8F8;
@@ -241,3 +243,32 @@ h1.post-title {
 }
 
 .grey { color: grey; }
+
+// Syntax highlighting
+@import "pygments.css";
+
+// Code blocks
+
+code, pre, :is(code, pre) * {
+	font-family: "Source Code Pro", Consolas, monospace;
+	font-size: 11.8pt;
+}
+
+pre, :not(pre) > code {
+	border-radius: 0.2em;
+	border: 1px solid #BBB;
+}
+
+pre {
+	background-color: #eee8d5;
+	color: #657b83;
+	padding: 0.5em;
+	line-height: 135%;
+}
+
+:not(pre) > code {
+	background-color: #E4E4E4;
+
+	padding: 0 0.18em;
+	margin: 0 0.05em;
+}
