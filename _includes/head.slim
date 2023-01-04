@@ -21,7 +21,7 @@ title
 
 | {% if page.excerpt %}
 | {% capture desc %}
-| {{ page.excerpt | strip_html | truncatewords: 50 }}
+| {{ page.excerpt | strip_html | truncatewords: 50 }} […]
 | {% endcapture %}
 | {% else %}
 | {% assign desc = site.description %}
