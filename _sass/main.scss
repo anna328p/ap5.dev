@@ -275,13 +275,21 @@ pre {
 
 .code-file > code.code-file-name {
 	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+
 	padding: 0.35em 0.5em;
 
 	display: block;
 
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
-	border-bottom: none;
+	border-bottom: 1px dashed #AAA;
+}
+
+div.highlight {
+	background: inherit;
+	color: inherit;
 }
 
 .code-file pre.highlight {
@@ -289,6 +297,5 @@ pre {
 
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
-
-	border-top: 1px dashed #AAA;
+	border-top: none;
 }
