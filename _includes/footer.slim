@@ -1,10 +1,12 @@
-- divider = "<span class=\"divider\"> &nbsp;|&nbsp; </span>"
+= record :divider
+  span.divider
+    |<> &nbsp;|&nbsp;
 
 footer.site-footer
   | 🄯 {{ site.name }} {{ "now" | date: "%Y" }}
-  == divider
+  == replay :divider
   a href='/LICENSE.txt' AGPLv3
-  == divider
+  == replay :divider
   a href="{{ site.repo }}" Source code
-  == divider
+  == replay :divider
   a href='/feed.xml' RSS feed

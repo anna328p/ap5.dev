@@ -1,0 +1,88 @@
+---
+layout: default
+title: Home
+---
+
+= record :headshot
+  picture
+    img.headshot[
+      width='160'
+      height='160'
+      src='/assets/images/avatar.jpg'
+      alt="Profile picture"
+    ]
+
+= record :divider
+  span.divider<> &nbsp;|&nbsp;
+
+= record :email_link
+  a href='mailto:{{ site.email }}' {{ site.email }}
+
+= record :discord_name
+  | discord: @{{ site.discord_username }}
+
+ruby:
+  def self.sidebar_link = <<~HTML
+    <p class="sidebar-link-entry">
+      <span class="sidebar-link-pre">→</span>#{yield}
+    </p>
+  HTML
+
+= record :resume_link
+  a.sidebar-link[
+    href='assets/files/Resume - Anna Kudriavtsev - 2023-01-10.pdf'
+  ] Resume
+
+= record :twitter_link
+  a.sidebar-link[
+    href='https://twitter.com/{{ site.twitter_username }}'
+  ] Twitter
+
+= record :github_link
+  a.sidebar-link[
+    href='https://github.com/{{ site.github_username }}'
+  ] GitHub
+
+main.index aria-label="Content"
+  section.container.vcenter-col
+    .index-main.vcenter-item
+      .index-row
+        == replay :headshot
+      .index-row
+        .col
+          header
+            h1.name {{ site.name }}
+          section
+            p
+              | {{ site.pronouns }}
+              == replay :divider
+              == replay :email_link
+              == replay :divider
+              == replay :discord_name
+            p
+              markdown:
+                I'm an undergrad in Computer Engineering at [UIUC].
+                I have an interest in functional programming,
+                and have experience with backend development in Ruby.
+
+                [UIUC]: https://illinois.edu
+        .col
+          nav.link-list
+            == sidebar_link
+              a.sidebar-link href='/blog' Blog
+
+            == sidebar_link
+              == replay :resume_link
+              span.pdf-badge PDF
+
+            == sidebar_link
+              == replay :twitter_link
+
+            == sidebar_link
+              == replay :github_link
+
+            == sidebar_link
+              a.sidebar-link href='/tokipona' Toki Pona
+    .index-row
+      .col-footer
+         | {% include footer.slim %}

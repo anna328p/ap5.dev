@@ -1,7 +1,10 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs, flakes, system, ... }:
 
-pkgs.mkShell {
-	buildInputs = with pkgs; [
-		ruby_3_1
-	];
-}
+let
+	pkg = pkgs.callPackage ./default.nix { };
+in
+	pkg.overrideAttrs (attrs: {
+		nativeBuildInputs = (attrs.nativeBuildInputs or []) ++ [
+			pkgs.bundix
+		];
+	})

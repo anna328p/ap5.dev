@@ -6,10 +6,12 @@ meta name="viewport" content="width=device-width, initial-scale=1.0"
 link rel="preconnect" href="https://fonts.googleapis.com"
 link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=true
 
-- ss4 = "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap"
-- scp = "https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+- fonts = [ \
+    "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap",
+    "https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" \
+  ]
 
-- [ss4, scp].each do |font_url|
+- fonts.each do |font_url|
   link rel="preload" href="#{font_url}" as="style" onload="this.onload=null;this.rel='stylesheet'"
   noscript
     link rel="stylesheet" href="#{font_url}"

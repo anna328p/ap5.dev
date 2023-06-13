@@ -4,15 +4,13 @@ title: Blog
 ---
 
 | {% for post in site.posts %}
+
 article.post-summary
+
   h2.post-summary-header
     a.post-link href="{{ post.url }}" {{ post.title }}
     |  by {{ post.author }} at {{ post.date }}
-  blockquote.post-preview 
-    p
-      ' {{ post.excerpt | strip_html | truncatewords: 50 }}
-      a.grey href="{{ post.url }}"
-        | […]
+
   | {% if post.tags.size > 0 %}
   p.post-tag-list
     | (tags:
@@ -20,4 +18,11 @@ article.post-summary
     span.post-tag  {{ tag }}
     | {% endfor %})
   | {% endif %}
+
+  .post-main.post-preview
+    p
+      ' {{ post.excerpt | strip_html | truncatewords: 50 }}
+      a.grey href="{{ post.url }}"
+        | […]
+
 | {% endfor %}

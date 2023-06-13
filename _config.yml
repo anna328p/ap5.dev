@@ -24,10 +24,11 @@ url: https://ap5.dev
 repo: https://github.com/anna328p/ap5.dev
 
 name: Anna Kudriavtsev
+pronouns: they/them
 email: anna328p (at) gmail.com
 twitter_username: anna328p
 github_username:  anna328p
-discord: ap5#3091
+discord_username: ap5
 
 # Build settings
 markdown: kramdown
@@ -54,11 +55,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - shell.nix
+  - vendor/
+  - '*.nix'
+  - flake.lock
   - scripts/
   - .github/
   - .direnv/

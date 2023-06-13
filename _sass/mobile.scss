@@ -1,13 +1,16 @@
-@media #{$small-and-down} {
+@use "containers";
+
+@media #{containers.$small-and-down} {
 	.index-row {
 		grid-template-columns: 1fr;
 	}
 
 	.post-main {
-		padding: 0;
-		border: none;
-		color: #222;
-		background-color: #eee;
+		margin-left: calc(50% - 50vw);
+		width: calc(100vw - (2 * 20px));
+		border-radius: 0;
+		border-left: none;
+		border-right: none;
 	}
 
 	$code-block-width: 85vw;

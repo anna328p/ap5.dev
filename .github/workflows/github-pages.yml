@@ -9,21 +9,23 @@ jobs:
   jekyll:
     runs-on: ubuntu-latest
     steps:
-      - name: 📂 setup
-        uses: actions/checkout@v2
+      - name: 📚 checkout
+        uses: actions/checkout@v3
 
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1
+      - name: ❄️ setup nix
+        uses: cachix/install-nix-action@v20
 
-      - name: 🔨 install dependencies & build site
-        uses: limjh16/jekyll-action-ts@v2
+      - name: 🗃️ setup cachix
+        uses: cachix/cachix-action@v12
         with:
-          enable_cache: true
+          name: ap5
+          authToken: '${{ secrets.CACHIX_TOKEN }}'
+
+      - name: ⚙️ build site
+        run: nix build
 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GHP_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./result
