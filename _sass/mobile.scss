@@ -1,25 +1,25 @@
-@use "containers";
+@use 'containers';
 
 @media #{containers.$small-and-down} {
 	.index-row {
 		grid-template-columns: 1fr;
 	}
 
+	$post-width: calc(100vw - (2 * 20px));
+
 	.post-main {
 		margin-left: calc(50% - 50vw);
-		width: calc(100vw - (2 * 20px));
+		width: $post-width;
 		border-radius: 0;
 		border-left: none;
 		border-right: none;
 	}
 
-	$code-block-width: 85vw;
-
 	pre {
-		max-width: $code-block-width;
+		max-width: $post-width;
 	}
 
 	.code-file > code.code-file-name {
-		max-width: $code-block-width;
+		max-width: $post-width;
 	}
 }
