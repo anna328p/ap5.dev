@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Anna Kudriavtsev
 description: >-
-  student and computer engineer
+  anna's personal website
 
 image: /assets/images/avatar-circle.png
 
@@ -24,7 +24,7 @@ url: https://ap5.dev
 repo: https://github.com/anna328p/ap5.dev
 
 name: Anna Kudriavtsev
-pronouns: they/them
+pronouns: she/her or it/its
 email: anna328p (at) gmail.com
 twitter_username: anna328p
 github_username:  anna328p
