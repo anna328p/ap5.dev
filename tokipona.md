@@ -11,7 +11,7 @@ toki! lipu ni li pana e sona pi pali mi lon toki pona.
 - mi pali e sitelen pi nimi _ku_ lon sitelen pona.
 - mi pali e [lipu sona pi toki pona][2]. ona la, jan pi toki Inli li ken kama sona e toki pona. pali ona li pini ala; mi ken pali lon tenpo la, mi pali e ona.
 	- lipu linluwi ale mi la, lukin ona li pona mute tawa mi.
-- mi jan lawa lon [ma pona pi toki pona] li lawa e [kulupu pona] lon ilo Siko.
+- tenpo pini la, mi jan lawa lon [ma pona pi toki pona] li lawa e [kulupu pona] lon ilo Siko.
 </section>
 
 <hr />
@@ -24,7 +24,7 @@ hello! this page shows the things I do with toki pona.
 - I designed the glyph used for the word _ku_ in the _sitelen pona_ writing system.
 - I am making [a set of toki pona lessons][2] to teach English speakers toki pona. It's still a work in progress; I work on it when I have time.
 	- Out of the websites I've designed so far, this one is my favorite.
-- I help run [ma pona pi toki pona] (by far the most active toki pona community) and [kulupu pona] (the oldest toki pona community on Discord).
+- I previously helped run [ma pona pi toki pona] (by far the most active toki pona community) and [kulupu pona] (the oldest toki pona community on Discord).
 </section>
 
 
